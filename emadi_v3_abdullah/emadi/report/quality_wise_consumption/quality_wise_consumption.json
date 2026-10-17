@@ -1,0 +1,36 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-10-04 19:11:03.789781",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Letter Head Simple",
+ "modified": "2025-10-04 19:11:03.789781",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "Quality Wise Consumption",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Fabric Production",
+ "report_name": "Quality Wise Consumption",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Stock User"
+  },
+  {
+   "role": "Manufacturing User"
+  },
+  {
+   "role": "Manufacturing Manager"
+  },
+  {
+   "role": "Stock Manager"
+  }
+ ]
+}

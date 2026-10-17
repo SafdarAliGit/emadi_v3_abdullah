@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include emadi_v3_abdullah *.css
+recursive-include emadi_v3_abdullah *.csv
+recursive-include emadi_v3_abdullah *.html
+recursive-include emadi_v3_abdullah *.ico
+recursive-include emadi_v3_abdullah *.js
+recursive-include emadi_v3_abdullah *.json
+recursive-include emadi_v3_abdullah *.md
+recursive-include emadi_v3_abdullah *.png
+recursive-include emadi_v3_abdullah *.py
+recursive-include emadi_v3_abdullah *.svg
+recursive-include emadi_v3_abdullah *.txt
+recursive-exclude emadi_v3_abdullah *.pyc

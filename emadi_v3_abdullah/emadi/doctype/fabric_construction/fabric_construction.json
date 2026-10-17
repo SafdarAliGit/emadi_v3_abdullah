@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{name_prefix}-{quality}-{fabric_type}",
+ "creation": "2025-02-27 06:11:04.275911",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name_prefix",
+  "column_break_zxxmn",
+  "quality",
+  "column_break_hwq2r",
+  "fabric_item",
+  "column_break_rlujg",
+  "fabric_type",
+  "column_break_r4zpu",
+  "enabled",
+  "section_break_lpno9",
+  "fabric_construction_item",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "quality",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Quality",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "fabric_type",
+   "fieldtype": "Link",
+   "label": "Fabric Type",
+   "options": "Fabric Type"
+  },
+  {
+   "fieldname": "fabric_construction_item",
+   "fieldtype": "Table",
+   "label": "Fabric Construction Item",
+   "options": "Fabric Construction Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fabric Construction",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rlujg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lpno9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_hwq2r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fabric_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fabric Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_r4zpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "default": "FC",
+   "fieldname": "name_prefix",
+   "fieldtype": "Select",
+   "label": "Name Prefix",
+   "options": "FC\nFCV",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zxxmn",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-01-14 13:52:45.353018",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "Fabric Construction",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,4 @@
+[pre_model_sync]
+emadi_v3_abdullah.patches.rename_module_emadi_to_emadiv3
+
+[post_model_sync]

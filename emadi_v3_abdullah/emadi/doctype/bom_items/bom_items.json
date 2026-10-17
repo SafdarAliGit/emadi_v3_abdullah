@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-02-20 19:23:06.506703",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "for",
+  "yarn_count",
+  "ratio",
+  "weaving_wastage",
+  "consumption",
+  "column_break_vy3zf",
+  "yarn_qty",
+  "uom",
+  "lbs_per_bag",
+  "yarn_qty",
+  "required_bags",
+  "so_yarn_balance",
+  "delivery_sechdule_section",
+  "delivery_sechdule",
+  "delivery_quantity",
+  "delivery_date",
+  "brand"
+ ],
+ "fields": [
+  {
+   "fieldname": "for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "For",
+   "options": "Weft\nPile\nGround\nFancy"
+  },
+  {
+   "fieldname": "yarn_count",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Yarn Count",
+   "options": "Item"
+  },
+  {
+   "fieldname": "yarn_issued",
+   "fieldtype": "Float",
+   "label": "Yarn Issued (Lbs)",
+   "insert_after": "yarn_qty",
+   "dt": "BOM Items",
+   "read_only": 1,
+   "no_copy": 1,
+   "description": "Internal - Lbs of this row's yarn issued so far via Weaving Contract's \"Issue Yarn\" button. Self-healing (see events/issue_yarn.py's sync_yarn_issued_totals) - recomputed from actually-submitted Stock Entries every time the Weaving Contract form loads, not incrementally accumulated, so it can't drift even if a hooks.py entry is missing. Added 2026-09-16."
+  },
+  {
+   "fieldname": "consumption",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumption LBS/Meter",
+   "hidden": 1
+  },
+  {
+   "fieldname": "ratio",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Ratio %",
+   "hidden": 0
+  },
+  {
+   "fieldname": "weaving_wastage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Weaving Wastage %",
+   "hidden": 0
+  },
+  {
+   "default": "0",
+   "fieldname": "yarn_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yarn Qty",
+   "read_only": 0,
+   "description": "Lbs of this yarn on this contract. Prefilled with what is left on the Sales Order; reduce it to split the yarn across several Weaving Contracts."
+  },
+  {
+   "fetch_from": "yarn_count.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lbs_per_bag",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Lbs Per Bag"
+  },
+  {
+   "default": "0",
+   "fieldname": "required_bags",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Required Bags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "so_yarn_balance",
+   "fieldtype": "Float",
+   "label": "SO Balance (Lbs)",
+   "read_only": 1,
+   "no_copy": 1,
+   "description": "Lbs of this yarn still uncontracted on the Sales Order when this contract was fetched (other submitted contracts already deducted)."
+  },
+  {
+   "fieldname": "delivery_sechdule_section",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Delivery Quantity"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "column_break_vy3zf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_sechdule",
+   "fieldtype": "Heading",
+   "label": "Delivery Sechdule"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-26 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "BOM Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

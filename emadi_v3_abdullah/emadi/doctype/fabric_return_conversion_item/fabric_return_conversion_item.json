@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-01 21:28:29.852351",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "for",
+  "yarn_count",
+  "warehouse",
+  "available_qty",
+  "beam_length",
+  "beam_ends",
+  "consumption",
+  "column_break_ha8nk",
+  "yarn_qty",
+  "uom",
+  "valuation_rate",
+  "set_no",
+  "warp_weight",
+  "beem_rate",
+  "rate_per_meter"
+ ],
+ "fields": [
+  {
+   "fieldname": "for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "For",
+   "options": "Warp\nWeft"
+  },
+  {
+   "fieldname": "yarn_count",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Yarn / Beam",
+   "options": "Item"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "default": "0",
+   "fieldname": "available_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Available Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "beam_length",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Beam Length"
+  },
+  {
+   "fetch_from": "set_no.custom_ends",
+   "fieldname": "beam_ends",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Beam Ends"
+  },
+  {
+   "fieldname": "consumption",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumption Lbs/Meter"
+  },
+  {
+   "fieldname": "column_break_ha8nk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "yarn_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yarn Qty"
+  },
+  {
+   "fetch_from": "yarn_count.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "valuation_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Valuation Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "set_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Set No",
+   "options": "Batch"
+  },
+  {
+   "default": "0",
+   "fetch_from": "yarn_count.custom_warp_weight",
+   "fieldname": "warp_weight",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Warp Weight",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "yarn_count.custom_beem_rate",
+   "fieldname": "beem_rate",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Beem Rate",
+   "precision": "4",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rate_per_meter",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rate (Meter)"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-01 21:28:29.852351",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "Fabric Return Conversion Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

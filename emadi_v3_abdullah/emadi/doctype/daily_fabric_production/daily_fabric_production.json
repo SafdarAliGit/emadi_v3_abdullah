@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "DFP-.DD.-.MM.-.YY.-.###",
+ "creation": "2025-06-23 08:30:03.529902",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_yo4mw",
+  "time",
+  "section_break_52pgi",
+  "fetch_all_fabric_items",
+  "section_break_cl10w",
+  "daily_fabric_production_item",
+  "section_break_jcyst",
+  "total_qty",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "section_break_52pgi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "daily_fabric_production_item",
+   "fieldtype": "Table",
+   "label": "Daily Fabric Production Item",
+   "options": "Daily Fabric Production Item"
+  },
+  {
+   "fieldname": "section_break_jcyst",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_qty",
+   "fieldtype": "Float",
+   "label": "Total Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Fabric Production",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_yo4mw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fetch_all_fabric_items",
+   "fieldtype": "Button",
+   "label": "Fetch All Fabric Items"
+  },
+  {
+   "fieldname": "section_break_cl10w",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Fabric Production",
+   "link_fieldname": "daily_fabric_production"
+  }
+ ],
+ "modified": "2025-10-08 15:03:25.289186",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "Daily Fabric Production",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

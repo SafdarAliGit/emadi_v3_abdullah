@@ -1,0 +1,431 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-02-20 20:20:20.286959",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_details",
+  "date",
+  "weaver",
+  "customer",
+  "column_break_gfc3m",
+  "type",
+  "multi_item_weaving_contract",
+  "custom_status",
+  "column_break_g4vjm",
+  "amended_from",
+  "section_item",
+  "construction",
+  "gsm",
+  "column_break_item1",
+  "fabric_qty",
+  "column_break_item2",
+  "finish_weight",
+  "gross_weight",
+  "section_finish_items",
+  "finish_items",
+  "rate_section",
+  "weaving_rate_per_pick",
+  "weaving_rate_per_meter",
+  "total_charges_per_meter",
+  "section_break_pgtlb",
+  "bom_items",
+  "section_break_n01kw",
+  "total_consumption",
+  "column_break_ciiwd",
+  "total_yarn",
+  "column_break_n64sz",
+  "total_bags",
+  "section_construction",
+  "weaving_construction",
+  "loom_details_section",
+  "loom_type",
+  "column_break_fhbmy",
+  "loom_size",
+  "column_break_slcuw",
+  "payment_terms",
+  "sales_order",
+  "sales_order_item",
+  "time",
+  "delivery_date",
+  "fabric_type",
+  "weave",
+  "description",
+  "greige_request_no",
+  "erp_doc",
+  "mat_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "WC-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_details",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "weaver",
+   "fieldtype": "Link",
+   "label": "Weaver",
+   "options": "Supplier",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "mandatory_depends_on": "eval:doc.type=='Commercial' && (doc.weaver||'').trim().toLowerCase()=='paul textiles'"
+  },
+  {
+   "fieldname": "column_break_gfc3m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "label": "Weaving Type",
+   "options": "Weaving Type"
+  },
+  {
+   "fieldname": "multi_item_weaving_contract",
+   "fieldtype": "Check",
+   "label": "Multi Item Weaving Contract",
+   "default": "0",
+   "depends_on": "eval:doc.type=='Commercial'"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "fieldname": "custom_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nClose",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_g4vjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Weaving Contract",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_item",
+   "fieldtype": "Section Break",
+   "label": "Finish Item",
+   "depends_on": "eval:!(doc.type=='Commercial' && doc.multi_item_weaving_contract)"
+  },
+  {
+   "fieldname": "construction",
+   "fieldtype": "Link",
+   "label": "Finish Item",
+   "options": "Item",
+   "mandatory_depends_on": "eval:!(doc.type=='Commercial' && doc.multi_item_weaving_contract)"
+  },
+  {
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "label": "GSM",
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "column_break_item1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fabric_qty",
+   "fieldtype": "Float",
+   "label": "Order Qty"
+  },
+  {
+   "fieldname": "column_break_item2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "finish_weight",
+   "fieldtype": "Float",
+   "label": "Finish Weight",
+   "read_only_depends_on": "eval:doc.type!='Commercial'"
+  },
+  {
+   "default": "0",
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "label": "Gross Weight",
+   "read_only_depends_on": "eval:doc.type!='Commercial'"
+  },
+  {
+   "fieldname": "section_finish_items",
+   "fieldtype": "Section Break",
+   "label": "Finish Items",
+   "depends_on": "eval:doc.type=='Commercial' && doc.multi_item_weaving_contract"
+  },
+  {
+   "fieldname": "finish_items",
+   "fieldtype": "Table",
+   "label": "Finish Items",
+   "options": "Weaving Contract Finish Item",
+   "mandatory_depends_on": "eval:doc.type=='Commercial' && doc.multi_item_weaving_contract"
+  },
+  {
+   "fieldname": "rate_section",
+   "fieldtype": "Section Break",
+   "label": "Weaving Rate"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "weaving_rate_per_pick",
+   "fieldtype": "Data",
+   "label": "Weaving Rate Per Pick",
+   "hidden": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "weaving_rate_per_meter",
+   "fieldtype": "Data",
+   "label": "Weaving rate per Meter",
+   "hidden": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "total_charges_per_meter",
+   "fieldtype": "Data",
+   "label": "Total Charges Per Meter",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "section_break_pgtlb",
+   "fieldtype": "Section Break",
+   "label": "Yarn"
+  },
+  {
+   "fieldname": "bom_items",
+   "fieldtype": "Table",
+   "label": "BOM Items",
+   "options": "BOM Items"
+  },
+  {
+   "fieldname": "section_break_n01kw",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_consumption",
+   "fieldtype": "Float",
+   "hidden": 1,
+   "label": "Total Consumption",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ciiwd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_yarn",
+   "fieldtype": "Float",
+   "label": "Total Yarn",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_n64sz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_bags",
+   "fieldtype": "Float",
+   "label": "Total Bags",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_construction",
+   "fieldtype": "Section Break",
+   "label": "Weaving Construction"
+  },
+  {
+   "fieldname": "weaving_construction",
+   "fieldtype": "Table",
+   "label": "Weaving Construction",
+   "options": "Weaving Construction"
+  },
+  {
+   "fieldname": "loom_details_section",
+   "fieldtype": "Section Break",
+   "label": "Loom Details",
+   "hidden": 1
+  },
+  {
+   "fieldname": "loom_type",
+   "fieldtype": "Link",
+   "label": "Loom Type",
+   "options": "Loom Type",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_fhbmy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loom_size",
+   "fieldtype": "Float",
+   "label": "Loom Size",
+   "hidden": 1
+  },
+  {
+   "fieldname": "column_break_slcuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_terms",
+   "fieldtype": "Link",
+   "label": "Payment Terms",
+   "options": "Payment Term",
+   "hidden": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Sales Order",
+   "no_copy": 1,
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_order_item",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sales Order Item",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "label": "Delivery Date",
+   "hidden": 1
+  },
+  {
+   "fieldname": "fabric_type",
+   "fieldtype": "Link",
+   "label": "Fabric Type",
+   "options": "Fabric Type",
+   "hidden": 1
+  },
+  {
+   "fieldname": "weave",
+   "fieldtype": "Link",
+   "label": "Weave",
+   "options": "Weave",
+   "hidden": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "greige_request_no",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Greige Request No"
+  },
+  {
+   "fieldname": "erp_doc",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "ERP Doc#"
+  },
+  {
+   "fieldname": "mat_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Mat ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "weaving_contract"
+  },
+  {
+   "link_doctype": "Sizing Program",
+   "link_fieldname": "weaving_contract"
+  },
+  {
+   "link_doctype": "Material Request",
+   "link_fieldname": "weaving_contract"
+  },
+  {
+   "link_doctype": "Delivery Note",
+   "link_fieldname": "weaving_contract"
+  }
+ ],
+ "modified": "2026-10-14 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Emadiv3",
+ "name": "Weaving Contract",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

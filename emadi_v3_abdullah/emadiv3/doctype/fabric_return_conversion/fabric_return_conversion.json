@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FRC-{fabric_item}-{######}",
+ "creation": "2025-11-01 21:27:07.128852",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "qty",
+  "column_break_z2fdh",
+  "target_warehouse",
+  "column_break_q4dtd",
+  "fabric_item",
+  "column_break_scnev",
+  "posting_date",
+  "column_break_dag5g",
+  "posting_time",
+  "section_break_bdrms",
+  "customer",
+  "column_break_nxmcl",
+  "weaving_contract",
+  "section_break_fv4bb",
+  "fabric_return_conversion_item",
+  "section_break_k6lrp",
+  "daily_fabric_production",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_z2fdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_q4dtd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "quality.fabric_item",
+   "fieldname": "fabric_item",
+   "fieldtype": "Link",
+   "label": "Fabric Item",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_scnev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_dag5g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time"
+  },
+  {
+   "fieldname": "section_break_fv4bb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_k6lrp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fabric Return Conversion",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "daily_fabric_production",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Daily Fabric Production"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fabric Return Conversion",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "fabric_return_conversion_item",
+   "fieldtype": "Table",
+   "label": "Fabric Return Conversion Item",
+   "options": "Fabric Return Conversion Item"
+  },
+  {
+   "fieldname": "section_break_bdrms",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "weaving_contract",
+   "fieldtype": "Link",
+   "label": "Weaving Contract",
+   "options": "Weaving Contract"
+  },
+  {
+   "fieldname": "column_break_nxmcl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_fabric_return_conversion"
+  }
+ ],
+ "modified": "2025-11-04 20:04:41.597376",
+ "modified_by": "Administrator",
+ "module": "Emadiv3",
+ "name": "Fabric Return Conversion",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

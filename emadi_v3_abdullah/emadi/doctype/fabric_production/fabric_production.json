@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:FP-{fabric_item}-{######}",
+ "creation": "2025-02-27 06:36:47.399222",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "quality",
+  "column_break_2tj9a",
+  "qty",
+  "column_break_z2fdh",
+  "target_warehouse",
+  "column_break_q4dtd",
+  "fabric_item",
+  "column_break_scnev",
+  "posting_date",
+  "column_break_dag5g",
+  "posting_time",
+  "section_break_mausg",
+  "valuation_type",
+  "section_break_fv4bb",
+  "fabric_production_item",
+  "section_break_k6lrp",
+  "warp_rate",
+  "column_break_ixvvy",
+  "weft_rate",
+  "column_break_kdwye",
+  "finish_rate",
+  "amended_from",
+  "daily_fabric_production"
+ ],
+ "fields": [
+  {
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2tj9a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Link",
+   "label": "Quality",
+   "options": "Fabric Construction"
+  },
+  {
+   "fieldname": "fabric_production_item",
+   "fieldtype": "Table",
+   "label": "Fabric Production Item",
+   "options": "Fabric Production Item"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fabric Production",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_scnev",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "column_break_z2fdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Target Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dag5g",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time"
+  },
+  {
+   "fetch_from": "quality.fabric_item",
+   "fieldname": "fabric_item",
+   "fieldtype": "Link",
+   "label": "Fabric Item",
+   "options": "Item",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_q4dtd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "daily_fabric_production",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Daily Fabric Production"
+  },
+  {
+   "fieldname": "section_break_fv4bb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_k6lrp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kdwye",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "finish_rate",
+   "fieldtype": "Currency",
+   "label": "Finish Rate",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "warp_rate",
+   "fieldtype": "Currency",
+   "label": "Warp Rate",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ixvvy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "weft_rate",
+   "fieldtype": "Currency",
+   "label": "Weft Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mausg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "description": "<span style=\"font-weight: bold; color: orange;\">\nNOTE: If checked it allows 0 valuation,\nif Un checked it does not allow 0 valuation.\n</span>",
+   "fieldname": "valuation_type",
+   "fieldtype": "Check",
+   "label": " <span style=\"font-weight: bold; color: Green;\">Conversion </span>"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "fabric_production"
+  }
+ ],
+ "modified": "2025-11-01 21:48:55.434683",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "Fabric Production",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

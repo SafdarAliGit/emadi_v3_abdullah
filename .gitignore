@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+emadi_v3_abdullah/docs/current
+node_modules/

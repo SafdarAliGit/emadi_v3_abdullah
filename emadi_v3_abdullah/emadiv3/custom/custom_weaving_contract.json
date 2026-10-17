@@ -1,0 +1,19 @@
+{
+ "custom_fields": [
+  {
+   "fieldname": "sales_order_item_allocations",
+   "fieldtype": "Long Text",
+   "label": "Sales Order Item Allocations",
+   "insert_after": "sales_order_item",
+   "dt": "Weaving Contract",
+   "hidden": 1,
+   "read_only": 1,
+   "no_copy": 1
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Weaving Contract",
+ "links": [],
+ "property_setters": [],
+ "sync_on_migrate": 1
+}

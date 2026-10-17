@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2026-09-08 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reed_on_loom",
+  "reed_order",
+  "pick_on_loom",
+  "end_pile",
+  "end_ground",
+  "hem_fancy",
+  "total_piece_length",
+  "column_break_construction_1",
+  "cam_border",
+  "fancy_size",
+  "pile_cam",
+  "cut_pana",
+  "ribbon_type",
+  "pile_to_pile",
+  "pile_to_pile_width",
+  "column_break_construction_2",
+  "pile_ratio",
+  "pile_height",
+  "cutting_line_in_mm",
+  "salvedge_size",
+  "no_of_cutter",
+  "per_day_production"
+ ],
+ "fields": [
+  {
+   "fieldname": "reed_on_loom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Reed on Loom"
+  },
+  {
+   "fieldname": "reed_order",
+   "fieldtype": "Data",
+   "label": "Reed Order"
+  },
+  {
+   "fieldname": "pick_on_loom",
+   "fieldtype": "Data",
+   "label": "Pick on Loom"
+  },
+  {
+   "fieldname": "end_pile",
+   "fieldtype": "Data",
+   "label": "End Pile"
+  },
+  {
+   "fieldname": "end_ground",
+   "fieldtype": "Data",
+   "label": "End Ground"
+  },
+  {
+   "fieldname": "hem_fancy",
+   "fieldtype": "Data",
+   "label": "Hem Fancy"
+  },
+  {
+   "fieldname": "total_piece_length",
+   "fieldtype": "Data",
+   "label": "Total Piece Length"
+  },
+  {
+   "fieldname": "column_break_construction_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cam_border",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Cam Border"
+  },
+  {
+   "fieldname": "fancy_size",
+   "fieldtype": "Data",
+   "label": "Fancy Size"
+  },
+  {
+   "fieldname": "pile_cam",
+   "fieldtype": "Data",
+   "label": "Pile Cam"
+  },
+  {
+   "fieldname": "cut_pana",
+   "fieldtype": "Data",
+   "label": "Cut Pana"
+  },
+  {
+   "fieldname": "ribbon_type",
+   "fieldtype": "Data",
+   "label": "Ribbon Type"
+  },
+  {
+   "fieldname": "pile_to_pile",
+   "fieldtype": "Data",
+   "label": "Pile To Pile"
+  },
+  {
+   "fieldname": "pile_to_pile_width",
+   "fieldtype": "Data",
+   "label": "Pile To Pile Width"
+  },
+  {
+   "fieldname": "column_break_construction_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pile_ratio",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pile Ratio"
+  },
+  {
+   "fieldname": "pile_height",
+   "fieldtype": "Data",
+   "label": "Pile Height"
+  },
+  {
+   "fieldname": "cutting_line_in_mm",
+   "fieldtype": "Data",
+   "label": "Cutting Line in mm"
+  },
+  {
+   "fieldname": "salvedge_size",
+   "fieldtype": "Data",
+   "label": "Salvedge Size"
+  },
+  {
+   "fieldname": "no_of_cutter",
+   "fieldtype": "Data",
+   "label": "No of Cutter"
+  },
+  {
+   "fieldname": "per_day_production",
+   "fieldtype": "Data",
+   "label": "Per Day Production"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-09-08 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Emadiv3",
+ "name": "Weaving Construction",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,187 @@
+{
+ "custom_fields": [
+  {
+   "fieldname": "sales_order_item_allocations",
+   "fieldtype": "Long Text",
+   "label": "Sales Order Item Allocations",
+   "insert_after": "sales_order_item",
+   "dt": "Weaving Contract",
+   "hidden": 1,
+   "read_only": 1,
+   "no_copy": 1
+  },
+  {
+   "fieldname": "weaving_rate_per_lbs",
+   "fieldtype": "Currency",
+   "label": "Weaving Rate Per Lbs",
+   "insert_after": "rate_section",
+   "dt": "Weaving Contract"
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Weaving Contract",
+ "links": [],
+ "property_setters": [
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "weaving_rate_per_pick",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "weaving_rate_per_meter",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "total_charges_per_meter",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "fabric_type",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "time",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "delivery_date",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "weave",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "loom_type",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "loom_size",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "payment_terms",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "loom_details_section",
+   "property": "hidden",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "date",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "weaver",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "construction",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "0"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "gross_weight",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "0"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "finish_weight",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "0"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "custom_status",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "weaving_rate_per_lbs",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "total_yarn",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  },
+  {
+   "doctype_or_field": "DocField",
+   "doc_type": "Weaving Contract",
+   "field_name": "total_bags",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "1"
+  }
+ ],
+ "sync_on_migrate": 1
+}

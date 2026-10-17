@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-05 17:31:59.785106",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "for",
+  "yarn_count",
+  "consumption",
+  "column_break_vy3zf",
+  "yarn_qty",
+  "uom",
+  "lbs_per_bag",
+  "required_bags",
+  "delivery_sechdule_section",
+  "delivery_sechdule",
+  "delivery_quantity",
+  "delivery_date",
+  "brand",
+  "weaving_contract"
+ ],
+ "fields": [
+  {
+   "fieldname": "for",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "For",
+   "options": "Warp\nWeft"
+  },
+  {
+   "fieldname": "yarn_count",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Yarn Count",
+   "options": "Item"
+  },
+  {
+   "fieldname": "consumption",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Consumption LBS/Meter"
+  },
+  {
+   "fieldname": "column_break_vy3zf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "yarn_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Yarn Qty",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "yarn_count.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "lbs_per_bag",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Lbs Per Bag"
+  },
+  {
+   "default": "0",
+   "fieldname": "required_bags",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Required Bags",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_sechdule_section",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_sechdule",
+   "fieldtype": "Heading",
+   "label": "Delivery Sechdule"
+  },
+  {
+   "fieldname": "delivery_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Delivery Quantity"
+  },
+  {
+   "fieldname": "delivery_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Delivery Date"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Brand",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weaving_contract",
+   "fieldtype": "Link",
+   "label": "Weaving Contract",
+   "options": "Weaving Contract"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-08 18:36:39.339888",
+ "modified_by": "Administrator",
+ "module": "Emadi",
+ "name": "BOM Items Dn",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
